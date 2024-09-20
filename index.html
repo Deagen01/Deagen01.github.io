@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DTDMat: A Comprehensive SVBRDF Dataset with Detailed Text Descriptions">
+  <meta property="og:title" content="DTDMat: A Comprehensive SVBRDF Dataset with Detailed Text Descriptions" />
+  <meta property="og:description" content="A Comprehensive SVBRDF Dataset with Detailed Text Descriptions" />
+  <meta property="og:url" content="https://www.gvecchio.com/matsynth" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/representation.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="MatSynth: A Modern PBR Materials Dataset">
+  <meta name="twitter:description" content="A Modern PBR Materials Dataset">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="static/images/teaser.png">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="materials, dataset, deep learning, generative models, 3d, graphics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>DTDMat: A Comprehensive SVBRDF Dataset with Detailed Text Descriptions</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">DTDMat: A Comprehensive SVBRDF Dataset with Detailed Text Descriptions</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.gvecchio.com" target="_blank">Mufan Chen</a> [todo],
+              </span>
+            </div>
+
+            <!-- <div class="is-size-5 publication-authors">
+              <span class="author-block">*Adobe Research<br/>CVPR 2024</span>
+            </div> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2401.06056.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2401.06056" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Release abstract Link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/gvecchio/MatSynth" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" style="vertical-align: middle; font-size: 20px;">🤗</span>
+                    <span>Release</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/representation.jpg" alt="Representation image" />
+        <h2 class="subtitle has-text-centered">
+          <b>Samples of materials from the dataset.</b> 
+          Our dataset containing over 14,919 high-resolution Physically Based Rendering materials, each accompanied by detailed text descriptions, covering 20 distinct material types and 22 texture structures
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The emergence of image generation from text under scores the need for datasets enabling material generation from textual inputs. The scarcity of datasets containing textual descriptions poses a significant challenge, with many material datasets lacking essential text information. While some datasets offer tag information, these entries are often incomplete. 
+              
+              Certain datasets encourage participants to pro vide individualized descriptions for each material, yet this approach proves costly and demands a level of professional expertise from contributors. A notable gap exists between material and text data. Addressing this gap, we present DTDMat: A Comprehensive SVBRDF Dataset with Detailed Text Descriptions. DTDMat provides 10,000+ high resolution Physical Based Rendering materials, each accompanied by a detailed text description reflecting its prop erties, generated through our automatic annotation method. Encompassing 20 material types and 22 texture structures, DTDMat stands out as the most diverse dataset in this do main. Each description covers intrinsic type, texture, color, roughness, lightness, and other pertinent attributes. DTDMat represents the largest texture dataset with associated text, offering a wide range of categories and diverse de scriptions, setting a new benchmark in the field. We train a text-to-material generation framework based on DTDMat, yielding generated results that effectively augment our dataset with novel materials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Paper method -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">The Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              DTDMat is designed to support material generation from text and also could be used in other material related tasks, like material reconstruction. Our dataset is larger than previously available dataset with 1K high resolution and realistic materials along with an accurate description.
+            </p>
+
+            <h3>Composition of Dataset</h3>
+            <p>
+              DTDMat stands out as the largest material dataset with text, comprising 14,919 materials. we render each material under three distinct lighting conditions: directional light, point light, and environment light, generating a total of 89,514 render images using secular and metallic workflows. For text information, each material is accompanied by at least five tags and a complete sentence describing its properties.
+            </p>
+            <div class="hero-body">
+              <img src="static/images/intrinsic.png" alt="compositon image" />
+            </div>
+
+            <h3>Material Tags</h3>
+            <p>
+              DTDMat comprises a total of 22 texture structure categories, encompassing various types of texture states. And DTDMat is the first dataset to provide texture patterns based on material samples rather than natural images.
+              <br>
+              We identify the following 22 texture categories: bulge, circle, cubic, diamond, flat, flower, grid, grooved, herringbone, I-shaped, lined, marbled, mottled, pattern, peeling, pitted, polygonal, rectangular, scaly, stratified, woven, zigzagged and unknown.
+            </p>
+            <div class="hero-body">
+              <img src="static/images/mydtd.png" alt="label image" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper method -->
+
+  <!-- Paper poster -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title">Poster</h2>
+
+            <iframe src="static/pdfs/poster.pdf#zoom=FitW" width="100%" height="550">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@inproceedings{vecchio2023matsynth,
+  title={MatSynth: A Modern PBR Materials Dataset},
+  author={Vecchio, Giuseppe and Deschaintre, Valentin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024}
+}
+    </code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
